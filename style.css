@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #121212; /* темный фон */
+  color: #e0e0e0;
+}
+
+.container {
+  width: 760px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.model-status {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.top {
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  margin-bottom: 12px;
+  border: 1px solid #2a2a2a;
+}
+
+.result-display {
+  min-height: 60px;
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 28px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  background: #181818;
+  border-radius: 8px;
+}
+
+.result-letter {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #3a3dff, #7f5cff);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(127, 92, 255, 0.4);
+}
+
+.history {
+  max-height: 140px;
+  overflow: auto;
+  border: 1px solid #2c2c2c;
+  padding: 6px;
+  background: #1a1a1a;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+.bottom {
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  border: 1px solid #2a2a2a;
+
+  display: flex;           /* делаем две колонки */
+  gap: 20px;               /* отступ между канвасом и контролами */
+  align-items: flex-start; /* выравниваем по верхнему краю */
+}
+
+.canvas-area {
+  flex: 1; /* занимает всё оставшееся место */
+}
+
+.controls {
+  display: flex;
+  flex-direction: column; /* кнопка и інпут вертикально */
+  gap: 10px;
+  min-width: 160px;       /* фиксированная ширина панели справа */
+}
+
+canvas {
+  border: 1px solid #555;
+  background: #111;
+  display: block;
+  margin: 10px 0;
+  touch-action: none;
+  border-radius: 6px;
+}
+
+.hint {
+  font-size: 13px;
+  color: #888;
+  margin-top: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #4cafef, #0077ff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0077ff, #4cafef);
+  transform: scale(1.05);
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+  background: #222;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+#clearHistoryBtn {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Сканування зображення букв</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Сканування зображення букв</h1>
+
+    <!-- Верхня частина -->
+    <div class="top">
+      <div class="header-row">
+        <div id="modelStatus" class="model-status">Завантаження моделi...</div>
+        <button id="clearHistoryBtn">Видалити iсторiю</button>
+      </div>
+      <div id="resultDisplay" class="result-display"></div>
+      <div id="history" class="history"></div>
+    </div>
+
+    <!-- Нижня частина -->
+    <div class="bottom">
+      <!-- Лівий блок: канвас -->
+      <div class="canvas-area">
+        <h3>Поле для друку букви</h3>
+        <canvas id="drawCanvas" width="280" height="280"></canvas>
+        <div id="timerHint" class="hint" style="text-align:center; font-weight:bold; min-height:20px;"></div>
+        <p class="hint">Пiсля вiдпускання кнопки мишi поле очистится</p>
+      </div>
+
+      <!-- Правий блок: кнопки та інпут -->
+      <div class="controls">
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
